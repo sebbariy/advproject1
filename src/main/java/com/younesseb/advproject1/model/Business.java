@@ -11,7 +11,6 @@ public class Business {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int busid;
-    private int type;
     private String busname;
     private String description;
     private String link;
@@ -33,14 +32,6 @@ public class Business {
 
     public void setBusid(int busid) {
         this.busid = busid;
-    }
-
-    public int getType() {
-        return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
     }
 
     public String getBusname() {

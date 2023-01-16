@@ -24,17 +24,17 @@ public class StudentController {
     public List<Student> list(){
         return studentService.getAllStudents();
     }
-    @GetMapping("/{id}")
+    @GetMapping("/{schoolid}")
     public Optional<Student> getStudentById(@PathVariable int schoolid){
         return studentService.getStudentById(schoolid);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{schoolid}")
     public Student updateStudent(@PathVariable int schoolid, @RequestBody Student student){
         return studentService.updateStudent(schoolid, student);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{schoolid}")
     public void deleteStudent(@PathVariable int schoolid){
         studentService.deleteStudent(schoolid);
     }

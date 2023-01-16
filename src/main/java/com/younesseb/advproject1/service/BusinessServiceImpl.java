@@ -31,7 +31,6 @@ public class BusinessServiceImpl implements BusinessService {
     @Override
     public Business updateBusiness(int busid, Business business) {
         Business businessToUpdate = businessRepository.findById(busid).orElseThrow();
-        businessToUpdate.setType(business.getType());
         businessToUpdate.setBusname(business.getBusname());
         businessToUpdate.setLink(business.getLink());
         businessToUpdate.setDescription(business.getDescription());

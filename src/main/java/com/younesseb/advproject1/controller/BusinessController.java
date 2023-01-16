@@ -24,17 +24,17 @@ public class BusinessController {
     public List<Business> list(){
         return businessService.getAllBusiness();
     }
-    @GetMapping("/{id}")
+    @GetMapping("/{busid}")
     public Optional<Business> getBusinessById(@PathVariable int busid){
         return businessService.getBusinessById(busid);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{busid}")
     public Business updateBusiness(@PathVariable int busid,@RequestBody Business business){
         return businessService.updateBusiness(busid, business);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{busid}")
     public void deleteBusiness(@PathVariable int busid){
         businessService.deleteBusiness(busid);
     }

@@ -24,17 +24,17 @@ public class TourismController {
     public List<Tourism> list(){
         return tourismService.getAllTourism();
     }
-    @GetMapping("/{id}")
+    @GetMapping("/{tourismid}")
     public Optional<Tourism> getTourismById(@PathVariable int tourismid){
         return tourismService.getTourismById(tourismid);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{tourismid}")
     public Tourism updateTourism(@PathVariable int tourismid, @RequestBody Tourism tourism){
         return tourismService.updateTourism(tourismid, tourism);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{tourismid}")
     public void deleteTourism(@PathVariable int tourismid){
         tourismService.deleteTourism(tourismid);
     }
